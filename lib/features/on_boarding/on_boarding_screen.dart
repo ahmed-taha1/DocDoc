@@ -1,12 +1,15 @@
-import 'package:doc_doc/features/OnBoarding/widgets/doc_logo_and_name.dart';
-import 'package:doc_doc/features/OnBoarding/widgets/doctor_image_and_text.dart';
-import 'package:doc_doc/features/OnBoarding/widgets/get_started_button.dart';
+import 'package:doc_doc/core/helpers/spacing.dart';
+import 'package:doc_doc/features/on_boarding/widgets/doc_logo_and_name.dart';
+import 'package:doc_doc/features/on_boarding/widgets/doctor_image_and_text.dart';
+import 'package:doc_doc/features/on_boarding/widgets/get_started_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/theming/styles.dart';
 
 class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,9 +21,9 @@ class OnBoardingScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 22.h, bottom: 22.h),
             ),
             const DocLogoAndName(),
-            SizedBox(height: 30.h),
+            verticalSpace(30),
             const DoctorImageAndText(),
-            SizedBox(height: 18.h),
+            verticalSpace(18),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.h),
               child: Column(
@@ -31,7 +34,7 @@ class OnBoardingScreen extends StatelessWidget {
                     style: TextStyles.font13GrayRegular,
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 30.h),
+                  verticalSpace(30),
                   const GetStartedButton(),
                 ],
               ),

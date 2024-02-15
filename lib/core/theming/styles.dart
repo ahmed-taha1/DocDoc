@@ -23,8 +23,25 @@ class TextStyles{
 
   static TextStyle font16WhiteSemiBold = TextStyle(
     fontSize: 16.sp,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     color: Colors.white,
   );
 
+  static TextStyle font14LightGreyRegular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+    color: ColorsManager.lightGrey,
+  );
+
+  static TextStyle font14DarkBlueMedium = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsManager.darkBlue,
+  );
+
+  static TextStyle font13BlueRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.normal,
+    color: ColorsManager.mainBlue,
+  );
 }
