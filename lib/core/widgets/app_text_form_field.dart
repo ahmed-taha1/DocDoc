@@ -53,6 +53,10 @@ class AppTextFormField extends StatelessWidget {
         hintStyle: hintTextStyle ?? TextStyles.font14LightGreyRegular,
         hintText: hintText,
         suffix: suffixIcon,
+        suffixIconConstraints: BoxConstraints(
+          minHeight: 0,
+          maxHeight: 0,
+        ),
       ),
       obscureText: isObscureText ?? false,
       style: TextStyles.font14DarkBlueMedium,

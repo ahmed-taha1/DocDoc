@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: Icon(isObscureText
                             ? Icons.visibility_off
-                            : Icons.visibility),
+                            : Icons.visibility/*, size: 20*/),
                       ),
                     ),
                     verticalSpace(24),
