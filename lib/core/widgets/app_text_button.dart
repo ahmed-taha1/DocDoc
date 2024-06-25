@@ -13,17 +13,18 @@ class AppTextButton extends StatelessWidget {
   final TextStyle textStyle;
   final VoidCallback onPressed;
 
-  const AppTextButton(
-      {super.key,
-      this.borderRadius,
-      this.backgroundColor,
-      this.horizontalPadding,
-      this.verticalPadding,
-      this.buttonWidth,
-      this.buttonHeight,
-      required this.buttonText,
-      required this.textStyle,
-      required this.onPressed});
+  const AppTextButton({
+    super.key,
+    this.borderRadius,
+    this.backgroundColor,
+    this.horizontalPadding,
+    this.verticalPadding,
+    this.buttonWidth,
+    this.buttonHeight,
+    required this.buttonText,
+    required this.textStyle,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +32,15 @@ class AppTextButton extends StatelessWidget {
       onPressed: onPressed,
       style: TextButton.styleFrom(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius ?? 16),
+          borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
         ),
         backgroundColor: backgroundColor ?? ColorsManager.mainBlue,
         padding: EdgeInsets.symmetric(
-          horizontal: horizontalPadding ?? 12.w,
-          vertical: verticalPadding ?? 14.h,
+          horizontal: horizontalPadding?.w ?? 12.w,
+          vertical: verticalPadding?.h ?? 14.h,
         ),
-        fixedSize: Size(buttonWidth?.w ?? double.maxFinite, buttonHeight?.h ?? 50.h),
+        fixedSize:
+            Size(buttonWidth?.w ?? double.maxFinite, buttonHeight?.h ?? 50.h),
       ),
       child: Text(
         buttonText,
