@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/styles.dart';
 
-class TermsAndConditions extends StatelessWidget {
-  const TermsAndConditions({super.key});
+class TermsAndConditionsText extends StatelessWidget {
+  const TermsAndConditionsText({super.key});
 
   @override
   Widget build(BuildContext context) {
